@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenotazioni IC Cles</title>
+    <!-- Importa il font Pacifico da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,85 +13,179 @@
             padding: 0;
             background-color: #f2f2f2;
         }
+
+        /* Header con sfondo fisso */
         .header {
-            background-color: #f8f9fa;
-            padding: 20px;
+            background-image: url('img/sfondo.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 50px 0;
+            min-height: 300px;
             text-align: center;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .header img {
-            width: 100px;
-            position: absolute;
-            left: 10px;
-            top: 10px;
+
+        .logo {
+            width: 250px; /* Dimensione del logo */
         }
-        .header h1 {
-            font-size: 2.5rem;
-            color: #b22222;
+
+        /* Stile per il titolo animato */
+        h1, h2 {
+            font-size: 4.5rem;
+            color: #7A1811; /* Colore aggiornato */
+            font-family: 'Pacifico', cursive;
+            letter-spacing: 3px;
+            margin-left: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0;
+            text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white;
         }
-        .main-content {
-            text-align: center;
-            margin-top: 50px;
+
+        /* Animazione lettere */
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(-100px) scale(1.5);
+            animation: fall 0.5s forwards;
         }
-        .main-content h2 {
-            font-size: 2rem;
-            color: #b22222;
-            margin-bottom: 20px;
+
+        @keyframes fall {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
         }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        /* Contenitore per i servizi */
         .services {
             display: flex;
             justify-content: center;
-            margin-top: 30px;
+            gap: 30px; /* Spaziatura tra i blocchi */
+            margin: 50px 0;
+            padding: 20px;
         }
+
+        /* Stile per ogni singolo blocco (quadrato) */
         .service {
-            width: 300px;
-            margin: 0 20px;
-            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px; /* Dimensione larghezza */
+            height: 350px; /* Dimensione altezza */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        /* Immagini all'interno dei blocchi */
         .service img {
             width: 100%;
             height: auto;
+            max-height: 350px; /* Limita l'altezza massima delle immagini */
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
         }
-        .service h3 {
+
+        /* Stile per i titoli */
+        .service-title {
+            text-align: center;
             margin-top: 10px;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            color: #333;
+            font-weight: bold;
         }
+
+        /* Stile footer */
         .footer {
             text-align: center;
+            padding: 20px;
+            background-color: #7A1811;
+            color: white;
             margin-top: 50px;
-            font-size: 0.9rem;
-            color: #777;
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <img src="logo.png" alt="Logo Istituto Comprensivo Cles">
-        <h1>Prenotazioni IC Cles</h1>
+        <img class="logo" src="img/logo.png" alt="Logo Istituto Comprensivo Cles">
+        <div>
+            <h1 id="prenotazioni">Prenotazioni</h1>
+            <h2 id="ic-cles" class="hidden">IC&nbsp;Cles</h2>
+        </div>
     </div>
 
-    <div class="main-content">
-        <h2>Prenotazioni IC Cles</h2>
-        <div class="services">
+    <!-- Sezione Servizi -->
+    <div class="services">
+        <!-- Blocco Prenotazione Carrelli -->
+        <div class="service-container">
             <div class="service">
-                <img src="laptop.jpg" alt="Prenotazione Carrelli">
-                <h3>Prenotazione Carrelli</h3>
+                <img src="img/carrelli.jpg" alt="Prenotazione Carrelli">
             </div>
+            <div class="service-title">Prenotazione Carrelli</div>
+        </div>
+        <!-- Blocco Aula STEM -->
+        <div class="service-container">
             <div class="service">
-                <img src="stem.jpg" alt="Aula STEM">
-                <h3>Aula STEM</h3>
+                <img src="img/stem.png" alt="Aula STEM">
             </div>
+            <div class="service-title">Aula STEM</div>
+        </div>
+        <!-- Blocco Prenotazione Robot -->
+        <div class="service-container">
             <div class="service">
-                <img src="robot.jpg" alt="Prenotazione Robot">
-                <h3>Prenotazione Robot</h3>
+                <img src="img/robot.jpg" alt="Prenotazione Robot">
             </div>
+            <div class="service-title">Prenotazione Robot</div>
         </div>
     </div>
 
     <div class="footer">
         &copy; 2024 Istituto Comprensivo Bernardo Clesio - Cles
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const textElement = document.getElementById("prenotazioni");
+            const text = textElement.textContent;
+            textElement.textContent = ""; // Pulisce il testo originale
+
+            // Aggiunge ogni lettera con l'animazione per "Prenotazioni"
+            text.split("").forEach((letter, index) => {
+                const span = document.createElement("span");
+                span.textContent = letter;
+                span.classList.add("letter");
+                span.style.animationDelay = `${index * 0.1}s`; // Ritarda l'animazione per ogni lettera
+                textElement.appendChild(span);
+            });
+
+            // Dopo che l'animazione di "Prenotazioni" è completata, anima "IC Cles"
+            setTimeout(() => {
+                const icClesElement = document.getElementById("ic-cles");
+                icClesElement.classList.remove("hidden");
+                const icClesText = icClesElement.textContent;
+                icClesElement.textContent = ""; // Pulisce il testo originale
+
+                // Aggiunge ogni lettera con l'animazione per "IC Cles"
+                icClesText.split("").forEach((letter, index) => {
+                    const span = document.createElement("span");
+                    span.textContent = letter;
+                    span.classList.add("letter");
+                    span.style.animationDelay = `${index * 0.1}s`; // Ritarda l'animazione per ogni lettera
+                    icClesElement.appendChild(span);
+                });
+            }, text.length * 100 + 500); // Tempo totale per l'animazione + un piccolo ritardo
+        });
+    </script>
 
 </body>
 </html>
