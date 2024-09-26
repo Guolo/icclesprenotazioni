@@ -140,9 +140,9 @@ h1, h2 {
 }
 
 @media (max-width: 480px) {
-    /* Ingrandisci ancora il logo solo per smartphone */
+    /* Rimpicciolisci leggermente il logo solo per smartphone */
     .logo {
-        width: 350px;
+        width: 250px; /* Ridotto da 350px a 250px */
     }
 
     h1 {
