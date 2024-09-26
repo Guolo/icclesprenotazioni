@@ -1,0 +1,192 @@
+/* Stili base (per desktop e schermi più grandi) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Header con sfondo fisso */
+.header {
+    background-image: url('img/sfondo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 50px 0;
+    min-height: 300px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 250px; /* Dimensione del logo */
+}
+
+/* Stile per il titolo animato */
+h1, h2 {
+    font-size: 4.5rem;
+    color: #7A1811;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 3px;
+    margin-left: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white;
+}
+
+/* Layout di testo accanto al logo (per desktop) */
+.header div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Animazione lettere */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px) scale(1.5);
+    animation: fall 0.5s forwards;
+}
+
+@keyframes fall {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Contenitore per i servizi */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 0;
+    padding: 20px;
+}
+
+/* Stile per ogni singolo blocco (quadrato) */
+.service {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Stile per i titoli */
+.service-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Stile footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #7A1811;
+    color: white;
+    margin-top: 50px;
+}
+
+/* --- Ottimizzazioni per dispositivi mobili --- */
+@media (max-width: 768px) {
+    /* Riduci il logo e la dimensione del testo per schermi medi (tablet) */
+    .logo {
+        width: 180px;
+    }
+
+    h1, h2 {
+        font-size: 3rem;
+    }
+
+    /* Impila i servizi verticalmente invece di orizzontalmente */
+    .services {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service {
+        width: 100%;
+        height: auto;
+    }
+
+    .service img {
+        max-height: 300px;
+    }
+
+    /* Modifica l'allineamento per mettere il testo sotto al logo */
+    .header {
+        flex-direction: column;  /* Cambia la direzione del layout in verticale */
+        text-align: center;  /* Centra il testo */
+    }
+
+    .header div {
+        margin-top: 10px;  /* Aggiungi uno spazio tra logo e testo */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ridimensiona ulteriormente per piccoli schermi (smartphone) */
+    .logo {
+        width: 150px;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    /* Riduci il padding nell'header */
+    .header {
+        padding: 30px 0;
+        min-height: 200px;
+    }
+
+    /* Impila i servizi verticalmente con meno spaziatura */
+    .services {
+        gap: 15px;
+    }
+
+    .service {
+        width: 90%;  /* Rende i servizi un po' più piccoli rispetto alla larghezza della viewport */
+        height: auto;
+    }
+
+    .service img {
+        max-height: 200px;
+    }
+
+    /* Ridimensiona i titoli dei servizi */
+    .service-title {
+        font-size: 1.2rem;
+    }
+
+    /* Riduci il margine in fondo */
+    .footer {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
