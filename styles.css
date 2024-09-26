@@ -120,9 +120,11 @@ h1, h2 {
         gap: 20px;
     }
 
+    /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
-        width: 100%;
-        height: auto;
+        width: 90%; /* Occupa il 90% della larghezza dello schermo */
+        height: auto; /* Altezza automatica per mantenere le proporzioni */
+        max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
@@ -167,9 +169,11 @@ h1, h2 {
         gap: 15px;
     }
 
+    /* Aumenta la dimensione dei riquadri per gli smartphone */
     .service {
-        width: 90%;
+        width: 100%; /* Occupa l'intera larghezza dello schermo */
         height: auto;
+        max-width: 600px; /* Limita la larghezza massima per evitare riquadri troppo larghi */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
@@ -177,7 +181,7 @@ h1, h2 {
         width: 100%;
         height: auto;
         object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 200px; /* Imposta un'altezza massima */
+        max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
     }
 
     .service-title {
