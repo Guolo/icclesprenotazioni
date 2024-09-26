@@ -28,11 +28,10 @@ body {
 
 /* Stile per il titolo animato */
 h1, h2 {
-    font-size: 4.5rem;
+    font-size: 4.5rem; /* La stessa dimensione per "Prenotazioni" e "IC Cles" */
     color: #7A1811;
     font-family: 'Pacifico', cursive;
     letter-spacing: 3px;
-    margin-left: 20px;
     overflow: hidden;
     white-space: nowrap;
     margin: 0;
@@ -112,7 +111,7 @@ h1, h2 {
     }
 
     h1, h2 {
-        font-size: 3rem;
+        font-size: 3rem; /* Mantieni le stesse dimensioni per entrambi i testi anche su tablet */
     }
 
     .services {
@@ -147,11 +146,10 @@ h1, h2 {
     }
 
     /* Ingrandisci il testo "Prenotazioni IC Cles" su mobile */
-    h1 {
-        font-size: 4rem; /* Aumenta la dimensione del testo */
+    h1, h2 {
+        font-size: 4rem; /* Stessa dimensione per entrambi i testi */
         letter-spacing: 2px;
         text-align: center; /* Centra il testo sotto il logo */
-        margin-left: 0; /* Rimuovi il margine sinistro per centrare */
         text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Mantieni l'ombra */
     }
 
@@ -163,7 +161,7 @@ h1, h2 {
     }
 
     /* Margini per evitare che il contenuto esca dallo schermo */
-    .header, h1 {
+    .header, h1, h2 {
         padding-left: 10px;
         padding-right: 10px;
     }
