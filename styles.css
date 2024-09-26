@@ -140,9 +140,10 @@ h1, h2 {
 }
 
 @media (max-width: 480px) {
-    /* Rimpicciolisci leggermente il logo solo per smartphone */
+    /* Mantieni le proporzioni e riduci il logo su mobile */
     .logo {
-        width: 250px;
+        width: 150px;
+        height: auto; /* Mantiene le proporzioni originali */
     }
 
     /* Ingrandisci il testo "Prenotazioni IC Cles" su mobile */
@@ -154,12 +155,20 @@ h1, h2 {
         text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Mantieni l'ombra */
     }
 
+    /* Riduci padding del header su mobile */
     .header {
         padding: 30px 0;
         min-height: 200px;
         align-items: center; /* Assicurati che tutto sia centrato verticalmente */
     }
 
+    /* Margini per evitare che il contenuto esca dallo schermo */
+    .header, h1 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Stile per i servizi */
     .services {
         gap: 15px;
     }
