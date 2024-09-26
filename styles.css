@@ -89,7 +89,7 @@ h1, h2 {
     height: auto;
     max-height: 350px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px; /* Arrotonda gli angoli delle immagini */
 }
 
 .service-title {
@@ -145,12 +145,12 @@ h1, h2 {
         height: auto;
         object-fit: cover; /* Assicura che l'immagine riempia il riquadro */
         max-height: none; /* Rimuovi il limite di altezza per le immagini */
+        border-radius: 10px; /* Arrotonda gli angoli delle immagini */
     }
 
     .header {
         flex-direction: column;  /* Cambia la direzione del layout in verticale */
         text-align: center;  /* Centra il testo */
-        background-attachment: fixed; /* Mantieni lo sfondo fisso anche su mobile */
     }
 
     .header div {
@@ -195,6 +195,7 @@ h1, h2 {
         height: auto;
         object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
         max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
+        border-radius: 10px; /* Arrotonda gli angoli delle immagini */
     }
 
     .service-title {
