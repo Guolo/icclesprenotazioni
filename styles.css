@@ -68,6 +68,11 @@ h1, h2 {
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
+.service-container {
+    margin: 0; /* Rimuovi il margine */
+    padding: 0; /* Rimuovi il padding */
+}
+
 .service {
     background-color: white;
     border-radius: 10px;
@@ -120,19 +125,26 @@ h1, h2 {
         gap: 20px;
     }
 
-    /* Aumenta la dimensione dei riquadri per i tablet */
+    /* Rimuovi margini e padding per i riquadri di servizio */
+    .service-container {
+        margin: 0; /* Rimuovi il margine */
+        padding: 0; /* Rimuovi il padding */
+        width: 100%; /* Assicurati che occupi tutta la larghezza disponibile */
+    }
+
     .service {
-        width: 90%; /* Occupa il 90% della larghezza dello schermo */
+        width: 100%; /* Occupa l'intera larghezza dello schermo */
         height: auto; /* Altezza automatica per mantenere le proporzioni */
-        max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
+        max-width: none; /* Rimuovi la larghezza massima */
+        border-radius: 0; /* Rimuovi i bordi arrotondati */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
         width: 100%;
         height: auto;
-        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 300px; /* Imposta un'altezza massima */
+        object-fit: cover; /* Assicura che l'immagine riempia il riquadro */
+        max-height: none; /* Rimuovi il limite di altezza per le immagini */
     }
 
     .header {
@@ -180,7 +192,7 @@ h1, h2 {
     .service img {
         width: 100%;
         height: auto;
-        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
+        object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
         max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
     }
 
