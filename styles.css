@@ -1,6 +1,6 @@
 /* Stili base (per desktop e schermi più grandi) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Microsoft JhengHei UI', sans-serif; /* Cambia il font di base a Microsoft JhengHei UI */
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
@@ -11,7 +11,7 @@ body {
     background-image: url('img/sfondo.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Sfondo fisso */
+    background-attachment: fixed;
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
@@ -29,14 +29,15 @@ body {
 /* Stile per il titolo animato */
 h1, h2 {
     font-size: 4.5rem;
-    color: #7A1811;
-    font-family: 'Pacifico', cursive;
+    color: #7A1811; /* Colore del testo */
+    font-family: 'Microsoft JhengHei UI', sans-serif; /* Cambia il font a Microsoft JhengHei UI */
     letter-spacing: 3px;
     margin-left: 20px;
     overflow: hidden;
     white-space: nowrap;
     margin: 0;
-    text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white;
+    text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Ombra del testo */
+    font-weight: bold; /* Imposta il grassetto per i titoli */
 }
 
 /* Animazione lettere */
@@ -68,11 +69,6 @@ h1, h2 {
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
-.service-container {
-    margin: 0; /* Rimuovi il margine */
-    padding: 0; /* Rimuovi il padding */
-}
-
 .service {
     background-color: white;
     border-radius: 10px;
@@ -82,19 +78,18 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease; /* Transizione per l'animazione */
+    transition: transform 0.3s; /* Transizione per l'animazione al passaggio del mouse */
 }
 
 .service:hover {
-    transform: translateY(-10px); /* Solleva l'immagine di 10px */
+    transform: translateY(-5px); /* Sollevamento al passaggio del mouse */
 }
 
 .service img {
     width: 100%;
     height: auto;
-    max-height: 350px;
-    object-fit: cover;
-    border-radius: 10px; /* Arrotonda gli angoli delle immagini */
+    object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
+    border-radius: 10px 10px 0 0; /* Angoli arrotondati per l'immagine */
 }
 
 .service-title {
@@ -102,7 +97,8 @@ h1, h2 {
     margin-top: 10px;
     font-size: 1.4rem;
     color: #333;
-    font-weight: bold;
+    font-weight: bold; /* Imposta il grassetto per i titoli dei servizi */
+    font-family: 'Microsoft JhengHei UI', sans-serif; /* Cambia il font a Microsoft JhengHei UI */
 }
 
 /* Footer */
@@ -130,27 +126,19 @@ h1, h2 {
         gap: 20px;
     }
 
-    /* Rimuovi margini e padding per i riquadri di servizio */
-    .service-container {
-        margin: 0; /* Rimuovi il margine */
-        padding: 0; /* Rimuovi il padding */
-        width: 100%; /* Assicurati che occupi tutta la larghezza disponibile */
-    }
-
+    /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
-        width: 100%; /* Occupa l'intera larghezza dello schermo */
+        width: 90%; /* Occupa il 90% della larghezza dello schermo */
         height: auto; /* Altezza automatica per mantenere le proporzioni */
-        max-width: none; /* Rimuovi la larghezza massima */
-        border-radius: 0; /* Rimuovi i bordi arrotondati */
+        max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
         width: 100%;
         height: auto;
-        object-fit: cover; /* Assicura che l'immagine riempia il riquadro */
-        max-height: none; /* Rimuovi il limite di altezza per le immagini */
-        border-radius: 10px; /* Arrotonda gli angoli delle immagini */
+        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
+        max-height: 300px; /* Imposta un'altezza massima */
     }
 
     .header {
@@ -198,13 +186,13 @@ h1, h2 {
     .service img {
         width: 100%;
         height: auto;
-        object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
+        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
         max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
-        border-radius: 10px; /* Arrotonda gli angoli delle immagini */
     }
 
     .service-title {
         font-size: 1.2rem;
+        font-family: 'Microsoft JhengHei UI', sans-serif; /* Cambia il font a Microsoft JhengHei UI */
     }
 
     .footer {
