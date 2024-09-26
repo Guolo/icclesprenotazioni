@@ -142,11 +142,12 @@ h1, h2 {
 @media (max-width: 480px) {
     /* Rimpicciolisci leggermente il logo solo per smartphone */
     .logo {
-        width: 250px; /* Ridotto da 350px a 250px */
+        width: 250px;
     }
 
+    /* Ingrandisci il testo "Prenotazioni IC Cles" su mobile */
     h1 {
-        font-size: 2.5rem;
+        font-size: 4rem; /* Aumenta la dimensione del testo */
         letter-spacing: 2px;
         text-align: center; /* Centra il testo sotto il logo */
         margin-left: 0; /* Rimuovi il margine sinistro per centrare */
