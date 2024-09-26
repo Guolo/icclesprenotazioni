@@ -71,7 +71,7 @@ h1, h2 {
 /* Stile per ogni singolo blocco (quadrato) */
 .service {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px; /* Arrotonda gli angoli del blocco */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
     height: 350px;
@@ -85,11 +85,12 @@ h1, h2 {
     transform: translateY(-5px); /* Sollevamento al passaggio del mouse */
 }
 
+/* Arrotondamento degli angoli delle immagini */
 .service img {
     width: 100%;
     height: auto;
     object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
-    border-radius: 10px 10px 0 0; /* Angoli arrotondati per l'immagine */
+    border-radius: 20px; /* Arrotonda gli angoli dell'immagine */
 }
 
 .service-title {
@@ -131,6 +132,7 @@ h1, h2 {
         width: 90%; /* Occupa il 90% della larghezza dello schermo */
         height: auto; /* Altezza automatica per mantenere le proporzioni */
         max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
+        border-radius: 20px; /* Arrotonda gli angoli del blocco */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
@@ -139,6 +141,7 @@ h1, h2 {
         height: auto;
         object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
         max-height: 300px; /* Imposta un'altezza massima */
+        border-radius: 20px; /* Mantieni gli angoli arrotondati anche su mobile */
     }
 
     .header {
@@ -180,6 +183,7 @@ h1, h2 {
         width: 100%; /* Occupa l'intera larghezza dello schermo */
         height: auto;
         max-width: 600px; /* Limita la larghezza massima per evitare riquadri troppo larghi */
+        border-radius: 20px; /* Arrotonda gli angoli del blocco */
     }
 
     /* Aggiorna lo stile delle immagini per mantenerle intere */
@@ -188,6 +192,7 @@ h1, h2 {
         height: auto;
         object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
         max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
+        border-radius: 20px; /* Arrotonda gli angoli delle immagini anche su mobile */
     }
 
     .service-title {
