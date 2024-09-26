@@ -11,7 +11,7 @@ body {
     background-image: url('img/sfondo.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* Sfondo fisso */
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
@@ -150,6 +150,7 @@ h1, h2 {
     .header {
         flex-direction: column;  /* Cambia la direzione del layout in verticale */
         text-align: center;  /* Centra il testo */
+        background-attachment: fixed; /* Mantieni lo sfondo fisso anche su mobile */
     }
 
     .header div {
