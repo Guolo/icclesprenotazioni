@@ -19,10 +19,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 
 .logo {
-    width: 250px; /* Dimensione del logo */
+    width: 250px; /* Dimensione del logo predefinita per schermi grandi */
 }
 
 /* Stile per il titolo animato */
@@ -36,13 +37,6 @@ h1, h2 {
     white-space: nowrap;
     margin: 0;
     text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white;
-}
-
-/* Layout di testo accanto al logo (per desktop) */
-.header div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 /* Animazione lettere */
@@ -93,7 +87,6 @@ h1, h2 {
     border-radius: 10px 10px 0 0;
 }
 
-/* Stile per i titoli */
 .service-title {
     text-align: center;
     margin-top: 10px;
@@ -102,7 +95,7 @@ h1, h2 {
     font-weight: bold;
 }
 
-/* Stile footer */
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
@@ -115,14 +108,13 @@ h1, h2 {
 @media (max-width: 768px) {
     /* Riduci il logo e la dimensione del testo per schermi medi (tablet) */
     .logo {
-        width: 180px;
+        width: 200px;
     }
 
     h1, h2 {
         font-size: 3rem;
     }
 
-    /* Impila i servizi verticalmente invece di orizzontalmente */
     .services {
         flex-direction: column;
         gap: 20px;
@@ -137,7 +129,6 @@ h1, h2 {
         max-height: 300px;
     }
 
-    /* Modifica l'allineamento per mettere il testo sotto al logo */
     .header {
         flex-direction: column;  /* Cambia la direzione del layout in verticale */
         text-align: center;  /* Centra il testo */
@@ -149,29 +140,31 @@ h1, h2 {
 }
 
 @media (max-width: 480px) {
-    /* Ridimensiona ulteriormente per piccoli schermi (smartphone) */
+    /* Ingrandisci ancora il logo solo per smartphone */
     .logo {
-        width: 150px;
+        width: 350px;
     }
 
-    h1, h2 {
+    h1 {
         font-size: 2.5rem;
         letter-spacing: 2px;
+        text-align: center; /* Centra il testo sotto il logo */
+        margin-left: 0; /* Rimuovi il margine sinistro per centrare */
+        text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Mantieni l'ombra */
     }
 
-    /* Riduci il padding nell'header */
     .header {
         padding: 30px 0;
         min-height: 200px;
+        align-items: center; /* Assicurati che tutto sia centrato verticalmente */
     }
 
-    /* Impila i servizi verticalmente con meno spaziatura */
     .services {
         gap: 15px;
     }
 
     .service {
-        width: 90%;  /* Rende i servizi un po' più piccoli rispetto alla larghezza della viewport */
+        width: 90%;
         height: auto;
     }
 
@@ -179,12 +172,10 @@ h1, h2 {
         max-height: 200px;
     }
 
-    /* Ridimensiona i titoli dei servizi */
     .service-title {
         font-size: 1.2rem;
     }
 
-    /* Riduci il margine in fondo */
     .footer {
         padding: 10px;
         font-size: 0.9rem;
