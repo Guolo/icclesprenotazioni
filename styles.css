@@ -82,6 +82,11 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease; /* Transizione per l'animazione */
+}
+
+.service:hover {
+    transform: translateY(-10px); /* Solleva l'immagine di 10px */
 }
 
 .service img {
