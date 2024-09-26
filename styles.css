@@ -125,8 +125,12 @@ h1, h2 {
         height: auto;
     }
 
+    /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
-        max-height: 300px;
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
+        max-height: 300px; /* Imposta un'altezza massima */
     }
 
     .header {
@@ -168,8 +172,12 @@ h1, h2 {
         height: auto;
     }
 
+    /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
-        max-height: 200px;
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
+        max-height: 200px; /* Imposta un'altezza massima */
     }
 
     .service-title {
