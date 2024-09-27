@@ -28,4 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
             icClesElement.appendChild(span);
         });
     }, text.length * 100 + 500); // Tempo totale per l'animazione + un piccolo ritardo
+
+    // Caricamento dinamico dello sfondo
+    const imageUrl = 'img/sfondo.png';
+    
+    function bgImgLoaded() {
+        document.querySelector('.header').style.backgroundImage = `url(${imageUrl})`;
+    }
+    
+    if (imageUrl) {
+        const img = new Image();
+        img.src = imageUrl;
+        img.onload = bgImgLoaded;
+    }
 });
