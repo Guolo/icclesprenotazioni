@@ -85,7 +85,7 @@ h1, h2 {
     letter-spacing: 3px;
     overflow: hidden;
     white-space: nowrap;
-    -webkit-text-stroke: 4px white; /* Contorno bianco aumentato a 4px */
+    -webkit-text-stroke: 4px #f2f2f2; /* Contorno bianco aumentato a 4px */
     text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
     paint-order: stroke fill; /* Ordine di rendering: contorno prima, poi riempimento */
     font-weight: bold; /* Grassetto per i titoli */
