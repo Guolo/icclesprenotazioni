@@ -6,37 +6,25 @@ body {
     font-family: 'Nunito', sans-serif; /* Cambia il font di base a Nunito */
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2; /* Colore di sfondo generale */
-    overflow-x: hidden; /* Nascondi eventuali barre di scorrimento orizzontali */
+    background-color: #f2f2f2;
 }
 
-/* Sfondo fisso sotto l'header */
-.background {
+/* Header con sfondo fisso */
+.header {
     background-image: url('img/sfondo.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Sfondo fisso */
-    position: absolute; /* Posizione assoluta per coprire l'intera area */
-    top: 0; /* Inizia dall'alto */
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Mette lo sfondo dietro gli altri contenuti */
-}
-
-/* Header senza sfondo */
-.header {
+    background-attachment: fixed;
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
-    position: relative; /* Necessario per la posizione dei figli */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
 
-/* Logo */
 .logo {
     width: 250px; /* Dimensione del logo predefinita per schermi grandi */
 }
@@ -55,6 +43,7 @@ h2 {
 /* Stile per il titolo animato */
 h1, h2 {
     color: #7A1811; /* Colore del testo */
+    font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     letter-spacing: 3px;
     margin-left: 20px;
     overflow: hidden;
@@ -87,7 +76,6 @@ h1, h2 {
 
 /* Contenitore per i servizi */
 .services {
-    background-color: white; /* Sfondo bianco per la sezione dei servizi */
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -97,7 +85,7 @@ h1, h2 {
 
 /* Stile per ogni singolo blocco (quadrato) */
 .service {
-    background-color: white; /* Sfondo bianco per i riquadri */
+    background-color: white;
     border-radius: 10px; /* Angoli arrotondati del contenitore */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     width: 350px;
@@ -125,6 +113,7 @@ h1, h2 {
     font-size: 1.4rem;
     color: #333;
     font-weight: bold; /* Imposta il grassetto per i titoli dei servizi */
+    font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
 }
 
 /* Footer */
@@ -168,6 +157,7 @@ h1, h2 {
     }
 
     .header {
+        background-attachment: fixed;
         flex-direction: column;  /* Cambia la direzione del layout in verticale */
         text-align: center;  /* Centra il testo */
     }
@@ -193,6 +183,7 @@ h1, h2 {
     }
 
     .header {
+        background-attachment: fixed;
         padding: 30px 0;
         min-height: 200px;
         align-items: center; /* Assicurati che tutto sia centrato verticalmente */
@@ -219,6 +210,7 @@ h1, h2 {
 
     .service-title {
         font-size: 1.2rem;
+        font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     }
 
     .footer {
