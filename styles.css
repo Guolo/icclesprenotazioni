@@ -14,7 +14,7 @@ body {
     background-image: url('img/sfondo.png');
     background-size: cover; /* Mantiene il rapporto di aspetto dell'immagine */
     background-position: center;
-    background-attachment: scroll; /* Cambiato a scroll per dispositivi mobili */
+    background-attachment: fixed; /* Sfondo fisso */
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
@@ -141,7 +141,7 @@ h1, h2 {
     }
 
     .header {
-        background-attachment: scroll; /* Assicura che lo sfondo scorra su dispositivi mobili */
+        background-attachment: fixed; /* Mantiene lo sfondo fisso su tablet */
         min-height: 200px; /* Riduce l'altezza minima per schermi più piccoli */
         padding: 30px 0; /* Riduce il padding per migliorare la visualizzazione */
         flex-direction: column; /* Cambia la direzione del layout in verticale */
