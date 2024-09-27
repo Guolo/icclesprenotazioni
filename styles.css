@@ -31,7 +31,7 @@ body {
 
 /* Imposta il titolo Prenotazioni IC Cles in grassetto */
 h1 {
-    font-weight: 900; /* Imposta il grassetto specifico per il titolo principale */
+    font-weight: 800; /* Imposta il grassetto specifico per il titolo principale */
     font-size: 4.5rem;
 }
 
@@ -157,6 +157,7 @@ h1, h2 {
     }
 
     .header {
+        background-attachment: fixed;
         flex-direction: column;  /* Cambia la direzione del layout in verticale */
         text-align: center;  /* Centra il testo */
     }
@@ -182,6 +183,7 @@ h1, h2 {
     }
 
     .header {
+        background-attachment: fixed;
         padding: 30px 0;
         min-height: 200px;
         align-items: center; /* Assicurati che tutto sia centrato verticalmente */
