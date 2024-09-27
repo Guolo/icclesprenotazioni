@@ -9,12 +9,11 @@ body {
     background-color: #f2f2f2;
 }
 
-/* Header con sfondo fisso */
+/* Header con sfondo dinamico */
 .header {
-    background-image: url('img/sfondo.png');
-    background-size: cover; /* Mantiene il rapporto di aspetto dell'immagine */
+    background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Sfondo fisso */
+    background-attachment: fixed;
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
@@ -55,25 +54,6 @@ h1, h2 {
     font-weight: bold; /* Grassetto per i titoli */
 }
 
-/* Animazione lettere */
-.letter {
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(-100px) scale(1.5);
-    animation: fall 0.5s forwards;
-}
-
-@keyframes fall {
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.hidden {
-    visibility: hidden;
-}
-
 /* Contenitore per i servizi */
 .services {
     display: flex;
@@ -84,10 +64,6 @@ h1, h2 {
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
-.service-container {
-    text-align: center; /* Centra il titolo del servizio sotto l'immagine */
-}
-
 .service {
     background-color: white;
     border-radius: 10px; /* Angoli arrotondati del contenitore */
@@ -117,7 +93,6 @@ h1, h2 {
     font-size: 1.4rem;
     color: #333;
     font-weight: bold; /* Imposta il grassetto per i titoli dei servizi */
-    font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
 }
 
 /* Footer */
@@ -131,20 +106,12 @@ h1, h2 {
 
 /* --- Ottimizzazioni per dispositivi mobili --- */
 @media (max-width: 768px) {
-    /* Riduci il logo e la dimensione del testo per schermi medi (tablet) */
     .logo {
         width: 200px;
     }
 
     h1, h2 {
-        font-size: 3rem; /* Riduce la dimensione del testo */
-    }
-
-    .header {
-        background-attachment: fixed; /* Mantiene lo sfondo fisso su tablet */
-        min-height: 200px; /* Riduce l'altezza minima per schermi più piccoli */
-        padding: 30px 0; /* Riduce il padding per migliorare la visualizzazione */
-        flex-direction: column; /* Cambia la direzione del layout in verticale */
+        font-size: 3rem;
     }
 
     .services {
@@ -152,66 +119,66 @@ h1, h2 {
         gap: 20px;
     }
 
-    /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
-        width: 90%; /* Occupa il 90% della larghezza dello schermo */
-        height: auto; /* Altezza automatica per mantenere le proporzioni */
-        max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
+        width: 90%;
+        height: auto;
+        max-width: 600px;
     }
 
-    /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
         width: 100%;
         height: auto;
-        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 300px; /* Imposta un'altezza massima */
+        object-fit: contain;
+        max-height: 300px;
     }
 
-    .header div {
-        margin-top: 10px;  /* Aggiungi uno spazio tra logo e testo */
+    .header {
+        background-attachment: fixed;
+        flex-direction: column;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ingrandisci ancora il logo solo per smartphone */
     .logo {
         width: 350px;
     }
 
     h1 {
-        font-size: 2.5rem; /* Ulteriore riduzione della dimensione del testo */
+        font-size: 2.5rem;
         letter-spacing: 2px;
-        text-align: center; /* Centra il testo sotto il logo */
-        margin-left: 0; /* Rimuovi il margine sinistro per centrare */
+        text-align: center;
+        margin-left: 0;
+        -webkit-text-stroke: 4px white;
+        text-stroke: 4px white;
     }
 
     .header {
-        padding: 20px 0; /* Ulteriore riduzione del padding per smartphone */
-        min-height: 150px; /* Altezza minima ancora più piccola per smartphone */
+        background-attachment: fixed;
+        padding: 30px 0;
+        min-height: 200px;
+        align-items: center;
     }
 
     .services {
         gap: 15px;
     }
 
-    /* Aumenta la dimensione dei riquadri per gli smartphone */
     .service {
-        width: 100%; /* Occupa l'intera larghezza dello schermo */
+        width: 100%;
         height: auto;
-        max-width: 600px; /* Limita la larghezza massima per evitare riquadri troppo larghi */
+        max-width: 600px;
     }
 
-    /* Aggiorna lo stile delle immagini per mantenerle intere */
     .service img {
         width: 100%;
         height: auto;
-        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 400px; /* Imposta un'altezza massima più ampia per gli smartphone */
+        object-fit: contain;
+        max-height: 400px;
     }
 
     .service-title {
         font-size: 1.2rem;
-        font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     }
 
     .footer {
