@@ -33,6 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
         const background = document.querySelector('.header-background');
         const scrollY = window.scrollY;
-        background.style.transform = `translateY(-${scrollY * 0.1}px)`; // Sposta verso l'alto con lo scroll
+        background.style.transform = `translateY(-${scrollY * 0.5}px)`; // Sposta verso l'alto con lo scroll
     });
 });
