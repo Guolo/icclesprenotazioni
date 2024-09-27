@@ -20,7 +20,6 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -10; /* Assicurati che lo sfondo sia dietro il contenuto */
-    /*transform: translateZ(0); /* Attiva il compositing del livello */
 }
 
 /* Header con sfondo fisso */
@@ -30,24 +29,53 @@ body {
     text-align: center;
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    justify-content: center; /* Centra il contenuto */
 }
 
+.header-content {
+    display: flex; /* Usa flexbox per allineare il logo e il testo */
+    align-items: center; /* Centra verticalmente il logo e il testo */
+}
+
+/* Dimensione del logo predefinita per schermi grandi */
 .logo {
-    width: 250px; /* Dimensione del logo predefinita per schermi grandi */
+    width: 250px;
+}
+
+.oscillate {
+    animation: oscillate 2s ease-in-out 1; /* Tre oscillazioni */
+    animation-fill-mode: forwards; /* Mantieni la posizione finale */
+}
+
+@keyframes oscillate {
+    0% {
+        transform: rotate(0deg); /* Inizia dritto */
+    }
+    25% {
+        transform: rotate(10deg); /* Ruota a destra */
+    }
+    50% {
+        transform: rotate(-10deg); /* Ruota a sinistra */
+    }
+    75% {
+        transform: rotate(5deg); /* Ritorna a destra */
+    }
+    100% {
+        transform: rotate(0deg); /* Torna alla posizione originale */
+    }
 }
 
 /* Imposta il titolo Prenotazioni IC Cles in grassetto */
 h1 {
     font-weight: 800; /* Imposta il grassetto specifico per il titolo principale */
     font-size: 4.5rem;
+    margin: 0; /* Rimuove il margine per un migliore allineamento */
 }
 
 h2 {
     font-size: 2.5rem;
     font-weight: 500;
+    margin: 0; /* Rimuove il margine per un migliore allineamento */
 }
 
 /* Stile per il titolo animato */
@@ -55,10 +83,8 @@ h1, h2 {
     color: #7A1811; /* Colore del testo */
     font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     letter-spacing: 3px;
-    margin-left: 20px;
     overflow: hidden;
     white-space: nowrap;
-    margin: 0;
     -webkit-text-stroke: 4px white; /* Contorno bianco aumentato a 4px */
     text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
     paint-order: stroke fill; /* Ordine di rendering: contorno prima, poi riempimento */
@@ -80,8 +106,9 @@ h1, h2 {
     }
 }
 
-.hidden {
-    visibility: hidden;
+/* Contenitore per ogni lettera */
+.letter-container {
+    display: inline-block; /* Permette di allineare le lettere in orizzontale */
 }
 
 /* Contenitore per i servizi */
@@ -89,7 +116,6 @@ h1, h2 {
     display: flex;
     justify-content: center;
     gap: 30px;
-    /*margin: 50px 0 0 0; /* Imposta solo il margine superiore */
     padding: 50px;
     background-color: #f2f2f2;
 }
@@ -153,7 +179,6 @@ h1, h2 {
     .header {
         min-height: 200px; /* Riduce l'altezza minima per schermi più piccoli */
         padding: 30px 0; /* Riduce il padding per migliorare la visualizzazione */
-        flex-direction: column; /* Cambia la direzione del layout in verticale */
     }
 
     .services {
@@ -164,42 +189,43 @@ h1, h2 {
     /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
         width: 90%; /* Occupa il 90% della larghezza dello schermo */
-        height: auto; /* Altezza automatica per mantenere le proporzioni */
-        max-width: 600px; /* Imposta una larghezza massima per evitare riquadri troppo larghi */
+        height: auto; /* Permette di adattare l'altezza automaticamente */
     }
 
-    /* Aggiorna lo stile delle immagini per mantenerle intere */
+    /* Stile delle immagini per mantenerle intere */
     .service img {
         width: 100%;
         height: auto;
         object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 300px; /* Imposta un'altezza massima */
+        max-height: 200px; /* Imposta un'altezza massima */
     }
 
-    .header div {
-        margin-top: 10px;  /* Aggiungi uno spazio tra logo e testo */
+    #text-container {
+        align-items: center; /* Centra il testo */
     }
 }
 
 @media (max-width: 480px) {
     /* Ingrandisci ancora il logo solo per smartphone */
     .logo {
-        width: 350px;
+        width: 150px;
     }
 
     h1 {
         font-size: 2.5rem; /* Ulteriore riduzione della dimensione del testo */
         letter-spacing: 2px;
-        text-align: center; /* Centra il testo sotto il logo */
-        margin-left: 0; /* Rimuovi il margine sinistro */
+        margin-bottom: 10px; /* Aggiungi un margine inferiore per separare i titoli */
     }
 
     h2 {
         font-size: 1.8rem; /* Ulteriore riduzione della dimensione del testo */
-        margin-left: 0; /* Rimuovi il margine sinistro */
     }
 
     .header {
         min-height: 150px; /* Riduce ulteriormente l'altezza minima per schermi piccoli */
+    }
+
+    #text-container {
+        align-items: center; /* Centra il testo */
     }
 }
