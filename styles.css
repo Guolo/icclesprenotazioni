@@ -12,9 +12,9 @@ body {
 /* Header con sfondo fisso */
 .header {
     background-image: url('img/sfondo.png');
-    background-size: cover;
+    background-size: cover; /* Mantiene il rapporto di aspetto dell'immagine */
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Cambiato a scroll per dispositivi mobili */
     padding: 50px 0;
     min-height: 300px;
     text-align: center;
@@ -84,6 +84,10 @@ h1, h2 {
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
+.service-container {
+    text-align: center; /* Centra il titolo del servizio sotto l'immagine */
+}
+
 .service {
     background-color: white;
     border-radius: 10px; /* Angoli arrotondati del contenitore */
@@ -133,7 +137,14 @@ h1, h2 {
     }
 
     h1, h2 {
-        font-size: 3rem;
+        font-size: 3rem; /* Riduce la dimensione del testo */
+    }
+
+    .header {
+        background-attachment: scroll; /* Assicura che lo sfondo scorra su dispositivi mobili */
+        min-height: 200px; /* Riduce l'altezza minima per schermi più piccoli */
+        padding: 30px 0; /* Riduce il padding per migliorare la visualizzazione */
+        flex-direction: column; /* Cambia la direzione del layout in verticale */
     }
 
     .services {
@@ -156,12 +167,6 @@ h1, h2 {
         max-height: 300px; /* Imposta un'altezza massima */
     }
 
-    .header {
-        background-attachment: fixed;
-        flex-direction: column;  /* Cambia la direzione del layout in verticale */
-        text-align: center;  /* Centra il testo */
-    }
-
     .header div {
         margin-top: 10px;  /* Aggiungi uno spazio tra logo e testo */
     }
@@ -174,19 +179,15 @@ h1, h2 {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Ulteriore riduzione della dimensione del testo */
         letter-spacing: 2px;
         text-align: center; /* Centra il testo sotto il logo */
         margin-left: 0; /* Rimuovi il margine sinistro per centrare */
-        -webkit-text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
-        text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
     }
 
     .header {
-        background-attachment: fixed;
-        padding: 30px 0;
-        min-height: 200px;
-        align-items: center; /* Assicurati che tutto sia centrato verticalmente */
+        padding: 20px 0; /* Ulteriore riduzione del padding per smartphone */
+        min-height: 150px; /* Altezza minima ancora più piccola per smartphone */
     }
 
     .services {
