@@ -1,6 +1,9 @@
+/* Importa il font Nunito da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
+
 /* Stili base (per desktop e schermi più grandi) */
 body {
-    font-family: 'Quicksand', sans-serif; /* Cambia il font di base a Quicksand */
+    font-family: 'Nunito', sans-serif; /* Cambia il font di base a Nunito */
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
@@ -26,23 +29,30 @@ body {
     width: 250px; /* Dimensione del logo predefinita per schermi grandi */
 }
 
+/* Imposta il titolo Prenotazioni IC Cles in grassetto */
+h1 {
+    font-weight: 900; /* Imposta il grassetto specifico per il titolo principale */
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
 /* Stile per il titolo animato */
 h1, h2 {
-    font-size: 4.5rem;
     color: #7A1811; /* Colore del testo */
-    font-family: 'Quicksand', sans-serif; /* Cambia il font a Quicksand */
+    font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     letter-spacing: 3px;
     margin-left: 20px;
     overflow: hidden;
     white-space: nowrap;
     margin: 0;
-    text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Ombra del testo */
+    -webkit-text-stroke: 4px white; /* Contorno bianco aumentato a 4px */
+    text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
+    paint-order: stroke fill; /* Ordine di rendering: contorno prima, poi riempimento */
     font-weight: bold; /* Grassetto per i titoli */
-}
-
-/* Imposta il titolo Prenotazioni IC Cles in grassetto */
-h1 {
-    font-weight: 700; /* Imposta il grassetto specifico per il titolo principale */
 }
 
 /* Animazione lettere */
@@ -103,7 +113,7 @@ h1 {
     font-size: 1.4rem;
     color: #333;
     font-weight: bold; /* Imposta il grassetto per i titoli dei servizi */
-    font-family: 'Quicksand', sans-serif; /* Cambia il font a Quicksand */
+    font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
 }
 
 /* Footer */
@@ -167,7 +177,8 @@ h1 {
         letter-spacing: 2px;
         text-align: center; /* Centra il testo sotto il logo */
         margin-left: 0; /* Rimuovi il margine sinistro per centrare */
-        text-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white; /* Mantieni l'ombra */
+        -webkit-text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
+        text-stroke: 4px white; /* Contorno bianco aumentato a 4px per il titolo */
     }
 
     .header {
@@ -197,7 +208,7 @@ h1 {
 
     .service-title {
         font-size: 1.2rem;
-        font-family: 'Quicksand', sans-serif; /* Cambia il font a Quicksand */
+        font-family: 'Nunito', sans-serif; /* Cambia il font a Nunito */
     }
 
     .footer {
