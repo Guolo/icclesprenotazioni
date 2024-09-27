@@ -19,7 +19,7 @@ body {
     background-image: url('img/sfondo.png');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Assicurati che lo sfondo sia dietro il contenuto */
+    z-index: -10; /* Assicurati che lo sfondo sia dietro il contenuto */
     transform: translateZ(0); /* Attiva il compositing del livello */
 }
 
@@ -90,7 +90,8 @@ h1, h2 {
     justify-content: center;
     gap: 30px;
     margin: 50px 0;
-    padding: 20px;
+    padding: 50px;
+    background-color: #f2f2f2;
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
