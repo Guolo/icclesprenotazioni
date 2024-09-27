@@ -20,7 +20,7 @@ body {
     background-size: cover;
     background-position: center;
     z-index: -10; /* Assicurati che lo sfondo sia dietro il contenuto */
-    transform: translateZ(0); /* Attiva il compositing del livello */
+    /*transform: translateZ(0); /* Attiva il compositing del livello */
 }
 
 /* Header con sfondo fisso */
@@ -89,7 +89,7 @@ h1, h2 {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 50px 0;
+    /*margin: 50px 0 0 0; /* Imposta solo il margine superiore */
     padding: 50px;
     background-color: #f2f2f2;
 }
@@ -137,7 +137,6 @@ h1, h2 {
     padding: 20px;
     background-color: #7A1811;
     color: white;
-    margin-top: 50px;
 }
 
 /* --- Ottimizzazioni per dispositivi mobili --- */
