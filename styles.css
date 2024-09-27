@@ -179,30 +179,48 @@ h1, h2 {
     .header {
         min-height: 200px; /* Riduce l'altezza minima per schermi più piccoli */
         padding: 30px 0; /* Riduce il padding per migliorare la visualizzazione */
+        flex-direction: column; /* Dispone il logo e il testo in colonna */
+    }
+
+    .header-content {
+        display: flex; /* Flexbox mantiene il layout flessibile */
+        flex-direction: column; /* Posiziona il testo sotto il logo */
+        align-items: center; /* Centra il contenuto */
     }
 
     .services {
         flex-direction: column;
         gap: 20px;
+        padding: 0; /* Elimina il padding per evitare sforamenti */
+        margin: 0 auto; /* Centra il contenuto all'interno del div */
+    }
+
+    /* Impostazioni del service per mantenerli all'interno del contenitore con margine */
+    .service-container {
+        width: calc(100% - 60px); /* Larghezza con margine laterale maggiore */
+        margin: 30px 30px 0 30px; /* Margine di 30px in alto, destra, sinistra, 0px in basso */
+        padding: 0; /* Elimina il padding */
     }
 
     /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
-        width: 90%; /* Occupa il 90% della larghezza dello schermo */
+        width: 100%; /* Imposta la larghezza per riempire il contenitore */
         height: auto; /* Permette di adattare l'altezza automaticamente */
+        margin: 0; /* Elimina il margine interno */
+        padding: 0; /* Elimina il padding interno */
     }
 
-    /* Stile delle immagini per mantenerle intere */
+    /* Stile delle immagini per mantenere le dimensioni corrette */
     .service img {
-        width: 100%;
+        width: 100%; /* L'immagine occupa il 100% della larghezza del div */
         height: auto;
-        object-fit: contain; /* Assicura che l'immagine sia visibile interamente */
-        max-height: 200px; /* Imposta un'altezza massima */
+        object-fit: cover; /* Riempie il contenitore senza distorcere l'immagine */
+        border-radius: 0; /* Rimuovi l'arrotondamento degli angoli per dispositivi mobili */
     }
 
-    #text-container {
-        align-items: center; /* Centra il testo */
-    }
+    .service-container:nth-child(3) {
+    margin-bottom: 50px; /* Imposta il margin-bottom solo per il terzo div */
+}
 }
 
 @media (max-width: 480px) {
@@ -225,6 +243,10 @@ h1, h2 {
         min-height: 150px; /* Riduce ulteriormente l'altezza minima per schermi piccoli */
     }
 
+    .header-content {
+        flex-direction: column; /* Conferma la disposizione a colonna per schermi piccoli */
+    }
+    
     #text-container {
         align-items: center; /* Centra il testo */
     }
