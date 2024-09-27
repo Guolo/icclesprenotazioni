@@ -169,7 +169,7 @@ h1, h2 {
 @media (max-width: 768px) {
     /* Riduci il logo e la dimensione del testo per schermi medi (tablet) */
     .logo {
-        width: 200px;
+        width: 300px;
     }
 
     h1, h2 {
@@ -215,7 +215,6 @@ h1, h2 {
         width: 100%; /* L'immagine occupa il 100% della larghezza del div */
         height: auto;
         object-fit: cover; /* Riempie il contenitore senza distorcere l'immagine */
-        border-radius: 0; /* Rimuovi l'arrotondamento degli angoli per dispositivi mobili */
     }
 
     .service-container:nth-child(3) {
@@ -226,17 +225,17 @@ h1, h2 {
 @media (max-width: 480px) {
     /* Ingrandisci ancora il logo solo per smartphone */
     .logo {
-        width: 150px;
+        width: 250px;
     }
 
     h1 {
-        font-size: 2.5rem; /* Ulteriore riduzione della dimensione del testo */
+        font-size: 3.5rem; /* Ulteriore riduzione della dimensione del testo */
         letter-spacing: 2px;
         margin-bottom: 10px; /* Aggiungi un margine inferiore per separare i titoli */
     }
 
     h2 {
-        font-size: 1.8rem; /* Ulteriore riduzione della dimensione del testo */
+        font-size: 2.8rem; /* Ulteriore riduzione della dimensione del testo */
     }
 
     .header {
@@ -246,7 +245,7 @@ h1, h2 {
     .header-content {
         flex-direction: column; /* Conferma la disposizione a colonna per schermi piccoli */
     }
-    
+
     #text-container {
         align-items: center; /* Centra il testo */
     }
