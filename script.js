@@ -29,16 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, text.length * 100 + 500); // Tempo totale per l'animazione + un piccolo ritardo
 
-    // Caricamento dinamico dello sfondo
-    const imageUrl = 'img/sfondo.png';
-    
-    function bgImgLoaded() {
-        document.querySelector('.header').style.backgroundImage = `url(${imageUrl})`;
-    }
-    
-    if (imageUrl) {
-        const img = new Image();
-        img.src = imageUrl;
-        img.onload = bgImgLoaded;
-    }
+    // Effetto di scorrimento per lo sfondo
+    window.addEventListener("scroll", () => {
+        const background = document.querySelector('.header-background');
+        const scrollY = window.scrollY;
+        background.style.transform = `translateY(${scrollY * 0.5}px)`; // Modifica il valore per controllare la velocità
+    });
 });
