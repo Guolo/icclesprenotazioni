@@ -1,22 +1,12 @@
 /* Importa il font Nunito da Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap');
 
-/* Imposta l'altezza al 100% per l'html e il body */
-html, body {
-    height: 100%;
+/* Stili base (per desktop e schermi più grandi) */
+body {
+    font-family: 'Nunito', sans-serif; /* Cambia il font di base a Nunito */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Imposta il contenitore principale (in questo caso il body) come Flexbox */
-body {
-    font-family: 'Nunito', sans-serif;
     background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Questo distribuisce lo spazio tra i blocchi */
 }
 
 /* Sfondo dell'header */
@@ -123,7 +113,6 @@ h1, h2 {
 
 /* Contenitore per i servizi */
 .services {
-    flex-grow: 1; /* Questo fa sì che la sezione services occupi lo spazio rimanente */
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -177,8 +166,6 @@ h1, h2 {
     padding: 0px;
     background-color: #7A1811;
     color: white;
-    position: relative;
-    width: 100%;
     /*flex-wrap: wrap; /* Permette la rottura delle righe */
 }
 
