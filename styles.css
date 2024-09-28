@@ -181,6 +181,35 @@ h1, h2 {
     margin-left: 10px; /* Spazio tra "Alberto" e "Guolo" */
 }
 
+/* --- Ottimizzazioni per iPad --- */
+@media (max-width: 1024px) {
+    /* Ingrandisci ancora il logo solo per smartphone */
+    .logo {
+        width: 300px;
+    }
+
+    .header-content {
+        flex-direction: column; /* Conferma la disposizione a colonna per schermi piccoli */
+    }
+
+    .services {
+        flex-wrap: wrap;
+    }
+
+    .service {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* --- Ottimizzazioni per iPad Air --- */
+@media (max-width: 820px) {
+    .service {
+        width: 300px;
+        height: 300px;
+    }
+}
+
 /* --- Ottimizzazioni per dispositivi mobili --- */
 @media (max-width: 768px) {
     /* Riduci il logo e la dimensione del testo per schermi medi (tablet) */
