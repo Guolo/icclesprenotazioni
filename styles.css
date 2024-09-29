@@ -9,6 +9,11 @@ body {
     background-color: #f2f2f2;
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /* Mantiene il colore originale del testo */
+}
+
 /* Sfondo dell'header */
 .header-background {
     position: fixed; /* O assoluto, se necessario */
