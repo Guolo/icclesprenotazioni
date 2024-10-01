@@ -355,6 +355,9 @@ h1, h2 {
     .desktop_calendar {
         display: none; /* Nasconde il div sui dispositivi mobili */
     }
+    #ultimo{
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 480px) {
