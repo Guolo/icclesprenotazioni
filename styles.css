@@ -123,6 +123,7 @@ h1, h2 {
     gap: 30px;
     padding: 50px;
     background-color: #f2f2f2;
+    flex-wrap: wrap;
 }
 
 /* Stile per ogni singolo blocco (quadrato) */
@@ -186,8 +187,12 @@ h1, h2 {
     margin-left: 10px; /* Spazio tra "Alberto" e "Guolo" */
 }
 
+.mobile_calendar {
+    padding-bottom: 50px;
+}
+
 /* --- Ottimizzazioni per iPad --- */
-@media (min-width: 1336px) {
+@media (min-width: 820px) {
   /* Imposta l'altezza al 100% per l'html e il body */
     html, body {
         height: 100%;
@@ -230,11 +235,21 @@ h1, h2 {
 
 }
 
+@media (min-width: 769px) {
+    .mobile_calendar {
+        display: none; /* Nasconde il div sui dispositivi desktop */
+    }
+}
+
 /* --- Ottimizzazioni per iPad --- */
 @media (max-width: 1024px) {
     /* Ingrandisci ancora il logo solo per smartphone */
     .logo {
         width: 300px;
+    }
+
+    .header {
+        min-height: auto;
     }
 
     .header-content {
@@ -311,7 +326,7 @@ h1, h2 {
         object-fit: cover; /* Riempie il contenitore senza distorcere l'immagine */
     }
 
-    .service-container:nth-child(3) {
+    .service-container:nth-child(4) {
         margin-bottom: 50px; /* Imposta il margin-bottom solo per il terzo div */
     }
 
@@ -335,6 +350,10 @@ h1, h2 {
         justify-content: space-between; /* Spazia gli elementi uniformemente */
         flex-direction: row; /* Allinea gli elementi in colonna */
         align-items: center; /* Centra gli elementi nel footer */
+    }
+
+    .desktop_calendar {
+        display: none; /* Nasconde il div sui dispositivi mobili */
     }
 }
 
