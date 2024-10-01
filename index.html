@@ -7,7 +7,7 @@
     <!-- Importa il font Nunito da Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- Collegamento al file CSS esterno -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -17,54 +17,51 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <a href="../index.html"> <!-- Reindirizza alla pagina index.html -->
-                <img class="logo oscillate" src="../img/logo.png" alt="Logo Istituto Comprensivo Cles">
-            </a>
+            <img class="logo oscillate" src="img/logo.png" alt="Logo Istituto Comprensivo Cles">
             <div id="text-container">
-                <h1 id="prenotazioni" class="hidden">Prenotazione</h1>
-                <h2 id="ic-cles" class="hidden">Carrelli</h2>
+                <h1 id="prenotazioni" class="hidden">Prenotazioni</h1>
+                <h2 id="ic-cles" class="hidden">IC&nbsp;Cles</h2>
             </div>
         </div>
     </div>
 
     <!-- Sezione Servizi -->
     <div class="services">
-        <!-- Blocco Prenotazione Lenovo -->
+        <!-- Blocco Prenotazione Carrelli -->
         <div class="service-container">
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2xb2pt445hmJlPvBSQceD5p5vwArzuzsIAh8DRdm0g_yPh49akDmQ2xT5lAktQCUDS16EDqXyk">
+            <a href="pages/carrelli.html"> <!-- Reindirizza alla pagina carrelli.html -->
                 <div class="service">
-                    <img src="../img/carrelli/lenovo.jpeg" alt="Carrello Lenovo">
+                    <img src="img/carrelli.jpg" alt="Prenotazione Carrelli">
                 </div>
-                <div class="service-title">Carrello Lenovo</div>
+                <div class="service-title">Prenotazione Carrelli</div>
             </a>
-            <div class="service-subtitle">Primo Piano SSPG ~ 21 postazioni</div> <!-- Sottotitolo -->
         </div>
-        <!-- Blocco Prenotazione WLABINF -->
+        <!-- Blocco Aula STEM -->
         <div class="service-container">
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3Spfz_UHFrvw6YmPMCk_U21z5zPso9vzu12iGId3lWESQeAnP6Axr8yC9LulYtpd7-xF2EsogB">
+            <a href="pages/stem.html"> <!-- Reindirizza alla pagina stem.html -->
                 <div class="service">
-                    <img src="../img/carrelli/wlabinf.jpeg" alt="Carrello WLABINF">
+                    <img src="img/stem.png" alt="Aula STEM">
                 </div>
-                <div class="service-title">Carrello WLABINF</div>
             </a>
-            <div class="service-subtitle">Secondo Piano SSPG ~ 23 postazioni</div> <!-- Sottotitolo -->
+            <div class="service-title">Aula STEM</div>
         </div>
-        <!-- Blocco Prenotazione Car01 -->
-        <style>
-            @media only screen and (max-width: 768px) {
-                .service-container:nth-child(3){
-                    margin-bottom: 50px;
-                }
-            }
-        </style>
+        <!-- Blocco Prenotazione Robot -->
         <div class="service-container">
-            <a href=""> <!-- Reindirizza alla pagina carrelli.html -->
+            <a href="pages/robot.html"> <!-- Reindirizza alla pagina robot.html -->
                 <div class="service">
-                    <img src="../img/carrelli/car01.jpeg" alt="Carrello SP Car01">
+                    <img src="img/robot.jpg" alt="Prenotazione Robot">
                 </div>
-                <div class="service-title">Carrello SP</div>
+                <div class="service-title">Prenotazione Robot</div>
             </a>
-            <div class="service-subtitle">SP Cles ~ 24 postazioni</div> <!-- Sottotitolo -->
+        </div>
+        <!-- Blocco Visualizza Calendario  -->
+        <div class="service-container">
+            <a href="pages/calendario.html"> <!-- Reindirizza alla pagina calendario.html -->
+                <div class="service">
+                    <img src="img/calendario.png" alt="Calendario IC Cles">
+                </div>
+                <div class="service-title">Visualizza Calendario</div>
+            </a>
         </div>
     </div>
 
@@ -78,7 +75,7 @@
     </div>
 
     <!-- Collegamento al file JavaScript esterno -->
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
