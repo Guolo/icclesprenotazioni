@@ -21,7 +21,9 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/sfondo.png');
+    background: rgb(206,224,220);
+    background: linear-gradient(149deg, rgba(234,232,232,1) 15%, rgba(206,224,220,1) 40%, rgba(193,62,55,1) 40%, rgba(122,24,17,1) 75%);
+    /*background-image: url('img/sfondo3.jpg');*/
     background-size: cover;
     background-position: center;
     z-index: -10; /* Assicurati che lo sfondo sia dietro il contenuto */
@@ -148,10 +150,14 @@ h1, h2 {
 }
 
 .service img {
-    width: 100%;
-    height: -webkit-fill-available;
+    width: 90%;
     object-fit: cover; /* Assicura che l'immagine sia visibile interamente */
     border-radius: 10px; /* Angoli arrotondati per l'immagine */
+}
+
+#full {
+  width: 100%;
+  height: -webkit-fill-available;
 }
 
 .service-title {
@@ -313,15 +319,16 @@ h1, h2 {
 
     /* Aumenta la dimensione dei riquadri per i tablet */
     .service {
-        width: 100%; /* Imposta la larghezza per riempire il contenitore */
-        height: auto; /* Permette di adattare l'altezza automaticamente */
-        margin: 0; /* Elimina il margine interno */
+        width: 350px; /* Imposta la larghezza per riempire il contenitore */
+        height: 350px; /* Permette di adattare l'altezza automaticamente */
+        margin: auto; /* Elimina il margine interno */
         padding: 0; /* Elimina il padding interno */
+        display: flex;
     }
 
     /* Stile delle immagini per mantenere le dimensioni corrette */
     .service img {
-        width: 100%; /* L'immagine occupa il 100% della larghezza del div */
+        width: 90%; /* L'immagine occupa il 100% della larghezza del div */
         height: auto;
         object-fit: cover; /* Riempie il contenitore senza distorcere l'immagine */
     }
@@ -384,8 +391,37 @@ h1, h2 {
         flex-direction: column; /* Conferma la disposizione a colonna per schermi piccoli */
     }
 
+    .service {
+        width: 300px; /* Imposta la larghezza per riempire il contenitore */
+        height: 300px; /* Permette di adattare l'altezza automaticamente */
+        margin: auto; /* Elimina il margine interno */
+        padding: 0; /* Elimina il padding interno */
+        display: flex;
+    }
+
     #text-container {
         align-items: center; /* Centra il testo */
+    }
+}
+
+@media (max-width: 430px) {
+    .service {
+        width: 350px; /* Imposta la larghezza per riempire il contenitore */
+        height: 350px; /* Permette di adattare l'altezza automaticamente */
+    }
+}
+
+@media (max-width: 390px) {
+    .service {
+        width: 330px; /* Imposta la larghezza per riempire il contenitore */
+        height: 330px; /* Permette di adattare l'altezza automaticamente */
+    }
+}
+
+@media (max-width: 375px) {
+    .service {
+        width: 300px; /* Imposta la larghezza per riempire il contenitore */
+        height: 300px; /* Permette di adattare l'altezza automaticamente */
     }
 }
 
@@ -394,5 +430,12 @@ h1, h2 {
         font-size: 3.0rem;
         letter-spacing: 2px;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 344px) {
+    .service {
+        width: 290px; /* Imposta la larghezza per riempire il contenitore */
+        height: 290px; /* Permette di adattare l'altezza automaticamente */
     }
 }
